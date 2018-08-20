@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="jumbotron">
+        <h1 class="display-3">Burger Time!!!</h1>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            {{#each burgers}}
+            <ul>
+                {{#unless devoured}}
+                    <li><div class="burgerDiv" data-value="{{id}}">{{id}}. {{name}}</div></li>
+                {{/unless}}
+            </ul>
+            {{/each}}
+        </div>
+        <div class="col-md-6">
+            {{#each burgers}}
+            <ul>
+                {{#if devoured}}
+                    <li><div class="eatenDiv" data-value="{{id}}">{{id}}. {{name}}</div></li>
+                {{/if}}
+            </ul>
+            {{/each}}
+        </div>
+    </div>
+
+</div>
