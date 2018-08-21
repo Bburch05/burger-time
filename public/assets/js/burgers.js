@@ -16,9 +16,11 @@ $(function() {
     });
   
     $("#addBurger").on("submit", function(event) {
-      // Make sure to preventDefault on a submit event.
       event.preventDefault();
-  
+      if(!$("#newBurger").val().trim()){
+        alert("Please enter a Burger Name")
+      }
+      else{
       var newBurger = {
         burgerName: $("#newBurger").val().trim(),
       };
@@ -33,6 +35,7 @@ $(function() {
           location.reload();
         }
       );
+    }
     });
   });
   
