@@ -11,6 +11,7 @@ USE burgers_db;
 CREATE TABLE burgers (
     id INT AUTO_INCREMENT NOT NULL,
     burgerName VARCHAR(200) NOT NULL,
-    devoured BOOL NOT NULL DEFAULT false
+    devoured BOOL NOT NULL DEFAULT false,
+    createdAt TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY(id)
 );
