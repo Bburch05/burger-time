@@ -1,0 +1,48 @@
+li {
+    list-style: none;
+}
+
+h1 {
+    text-align: center;
+    border-bottom: 2px solid #faaf18;
+}
+
+.bun {
+    background-color: #faaf18;
+    margin-bottom: 0px;
+}
+
+.meat {
+    background-color :  #3b2c0c;
+    color: white;
+    border-radius: 30px;
+}
+
+body {
+    background-color: #185494;
+}
+
+.btn {
+    background-color: #185494;
+    color: white;
+}
+
+.top {
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+.bottom {
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.burgerDiv:hover{
+    border: 2px solid #185494;
+}
+
+.eaten {
+    background-color: #4d390f;
+    border: 5px inset #42310d;
+    color: grey
+}

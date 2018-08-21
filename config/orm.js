@@ -10,9 +10,9 @@ var orm = {
     })
     },
     
-    insertOne : function(table,column,value,callback){
-    var query = "INSERT INTO ?? (?) VALUES (?)"
-    connection.query(query,[table,column,value],function(err,data){
+    insertOne : function(table,valObject,callback){
+    var query = "INSERT INTO ?? SET ?"
+    connection.query(query,[table,valObject],function(err,data){
     if (err) throw err;
     callback(data);
     })

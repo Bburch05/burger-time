@@ -1,25 +1,40 @@
 <div class="container">
-    <div class="jumbotron">
+    <div class="jumbotron bun top">
         <h1 class="display-3">Burger Time!!!</h1>
+        <h6 class="lead">Click a burger to eat it!</h6>
     </div>
-    <div class="row">
+    <div class="row meat">
         <div class="col-md-6">
-            {{#each burgers}}
+            <h1>Burgers Ready to Eat</h1>
             <ul>
+            {{#each burgers}}
                 {{#unless devoured}}
-                    <li><div class="burgerDiv" data-value="{{id}}">{{id}}. {{name}}</div></li>
+                    <li><div class="burgerDiv" data-id="{{id}}">{{id}}. {{burgerName}}</div></li>
                 {{/unless}}
-            </ul>
             {{/each}}
+            </ul>
         </div>
         <div class="col-md-6">
+            <h1>Burgers Eaten</h1>
+            <ul class="eaten">
             {{#each burgers}}
-            <ul>
                 {{#if devoured}}
-                    <li><div class="eatenDiv" data-value="{{id}}">{{id}}. {{name}}</div></li>
+                    <li><div class="eatenDiv" data-id="{{id}}">{{id}}. {{burgerName}}</div></li>
                 {{/if}}
-            </ul>
             {{/each}}
+            </ul>
+        </div>
+    </div>
+    <div class="jumbotron bun bottom">
+        <h1 class="display-3">Add a Burger</h1>
+            <form id="addBurger">
+                <div class="form-group">
+                  <label for="newBurger"></label>
+                  <input type="text"
+                    class="form-control" id="newBurger" aria-describedby="helpId" placeholder="">
+                </div>
+                <button type="submit" class="btn">Submit</button>
+            </form>
         </div>
     </div>
 
