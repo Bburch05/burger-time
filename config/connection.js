@@ -1,4 +1,4 @@
-// * Inside the `connection.js` file, setup the code to connect Node to MySQL.
+
 // Set up MySQL connection.
 var mysql = require("mysql");
 if (process.env.JAWSDB_URL){
@@ -25,4 +25,3 @@ connection.connect(function(err) {
 // Export connection for our ORM to use.
 module.exports = connection;
 
-// * Export the connection.
